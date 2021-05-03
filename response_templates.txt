@@ -1,0 +1,6 @@
+objective,negative,no
+objective,affirmative,yes, buy ??
+subjective,negative,I am sorry but we do not need ?
+subjective,negative,I hear that you want ? but unfortunately it is not needed
+subjective,affirmative,Great idea, buy ??
+subjective,affirmative,Your wish is my wish, buy ??
