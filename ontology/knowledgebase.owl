@@ -17,6 +17,12 @@
   <rdfs:range rdf:resource="#Product"/>
 </owl:ObjectProperty>
 
+<owl:ObjectProperty rdf:about="#has_current_desire">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#User"/>
+  <rdfs:range rdf:resource="#Desire"/>
+</owl:ObjectProperty>
+
 <owl:ObjectProperty rdf:about="#is_about">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
   <rdfs:domain rdf:resource="#Query"/>
@@ -25,6 +31,13 @@
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="#is_answered_with"/>
+
+<owl:ObjectProperty rdf:about="#is_desire_about">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Desire"/>
+  <rdfs:range rdf:resource="#Product"/>
+  <rdfs:subPropertyOf rdf:resource="#is_about"/>
+</owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="#is_on_list">
   <rdfs:domain rdf:resource="#Product"/>
@@ -47,6 +60,12 @@
 <owl:DatatypeProperty rdf:about="#intent_type">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
   <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#is_checked">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Desire"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
 </owl:DatatypeProperty>
 
 <owl:DatatypeProperty rdf:about="#p_name">
@@ -99,11 +118,19 @@
 
 <owl:Class rdf:about="#Product"/>
 
+<owl:Class rdf:about="#User"/>
+
+<owl:Class rdf:about="#Desire"/>
+
 <owl:Class rdf:about="#Query"/>
 
 <owl:Class rdf:about="#Response"/>
 
 <owl:Class rdf:about="#AffirmativeResponse">
+  <rdfs:subClassOf rdf:resource="#Response"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ControlResponse">
   <rdfs:subClassOf rdf:resource="#Response"/>
 </owl:Class>
 
@@ -156,8 +183,6 @@
   <rdfs:subClassOf rdf:resource="#Response"/>
 </owl:Class>
 
-<owl:Class rdf:about="#User"/>
-
 <swrl:Variable rdf:about="#q"/>
 
 <swrl:Variable rdf:about="#n1"/>
@@ -178,14 +203,116 @@
 
 <swrl:Variable rdf:about="#s"/>
 
+<User rdf:about="#user1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <has_current_desire rdf:resource="#desire2"/>
+</User>
+
 <Shoppinglist rdf:about="#shoppinglist1">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <contains_products rdf:resource="#apple"/>
+  <contains_products rdf:resource="#icecream"/>
+  <contains_products rdf:resource="#garlic"/>
+  <contains_products rdf:resource="#parsley"/>
+  <contains_products rdf:resource="#butter"/>
+  <contains_products rdf:resource="#chocolate"/>
   <contains_products>
     <Product/>
   </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products rdf:resource="#apple"/>
   <contains_products rdf:resource="#milk"/>
-  <contains_products rdf:resource="#icecream"/>
 </Shoppinglist>
 
 <Product rdf:about="#milk">
@@ -206,6 +333,30 @@
   <quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</quantity>
 </Product>
 
+<Product rdf:about="#garlic">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">garlic</p_name>
+  <quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</quantity>
+</Product>
+
+<Product rdf:about="#parsley">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parsley</p_name>
+  <quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</quantity>
+</Product>
+
+<Product rdf:about="#butter">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">butter</p_name>
+  <quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</quantity>
+</Product>
+
+<Product rdf:about="#chocolate">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chocolate</p_name>
+  <quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</quantity>
+</Product>
+
 <Response rdf:about="#response1">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <has_response_template rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</has_response_template>
@@ -215,7 +366,7 @@
 
 <Response rdf:about="#response2">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <has_response_template rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yes ??</has_response_template>
+  <has_response_template rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yes buy ??</has_response_template>
   <response_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objective</response_intent_type>
   <response_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">affirmative</response_type>
 </Response>
@@ -248,129 +399,41 @@
   <response_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">affirmative</response_type>
 </Response>
 
+<Response rdf:about="#response7">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <has_response_template rdf:datatype="http://www.w3.org/2001/XMLSchema#string">did you buy ?</has_response_template>
+  <response_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">none</response_intent_type>
+  <response_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">control</response_type>
+</Response>
+
 <Query rdf:about="#query1">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <query_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objective</query_intent_type>
-  <query_p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">apple</query_p_name>
+  <query_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subjective</query_intent_type>
+  <query_p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">onion</query_p_name>
 </Query>
 
-<swrl:Imp>
-  <swrl:body>
-    <swrl:AtomList>
-      <rdf:first>
-        <swrl:ClassAtom>
-          <swrl:classPredicate rdf:resource="#Response"/>
-          <swrl:argument1 rdf:resource="#r"/>
-        </swrl:ClassAtom>
-      </rdf:first>
-      <rdf:rest>
-        <swrl:AtomList>
-          <rdf:first>
-            <swrl:DatavaluedPropertyAtom>
-              <swrl:propertyPredicate rdf:resource="#response_type"/>
-              <swrl:argument1 rdf:resource="#r"/>
-              <swrl:argument2 rdf:resource="#t"/>
-            </swrl:DatavaluedPropertyAtom>
-          </rdf:first>
-          <rdf:rest>
-            <swrl:AtomList>
-              <rdf:first>
-                <swrl:BuiltinAtom>
-                  <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
-                  <swrl:arguments>
-                    <rdf:List>
-                      <rdf:first rdf:resource="#t"/>
-                      <rdf:rest>
-                        <rdf:List>
-                          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">affirmative</rdf:first>
-                        </rdf:List>
-                      </rdf:rest>
-                    </rdf:List>
-                  </swrl:arguments>
-                </swrl:BuiltinAtom>
-              </rdf:first>
-              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </swrl:AtomList>
-          </rdf:rest>
-        </swrl:AtomList>
-      </rdf:rest>
-    </swrl:AtomList>
-  </swrl:body>
-  <swrl:head>
-    <swrl:AtomList>
-      <rdf:first>
-        <swrl:ClassAtom>
-          <swrl:classPredicate rdf:resource="#AffirmativeResponse"/>
-          <swrl:argument1 rdf:resource="#r"/>
-        </swrl:ClassAtom>
-      </rdf:first>
-      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    </swrl:AtomList>
-  </swrl:head>
-  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is_affirmative_response</rdfs:label>
-  <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
-</swrl:Imp>
+<Product rdf:about="#onion">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">onion</p_name>
+</Product>
 
-<swrl:Imp>
-  <swrl:body>
-    <swrl:AtomList>
-      <rdf:first>
-        <swrl:ClassAtom>
-          <swrl:classPredicate rdf:resource="#Response"/>
-          <swrl:argument1 rdf:resource="#r"/>
-        </swrl:ClassAtom>
-      </rdf:first>
-      <rdf:rest>
-        <swrl:AtomList>
-          <rdf:first>
-            <swrl:DatavaluedPropertyAtom>
-              <swrl:propertyPredicate rdf:resource="#response_intent_type"/>
-              <swrl:argument1 rdf:resource="#r"/>
-              <swrl:argument2 rdf:resource="#t"/>
-            </swrl:DatavaluedPropertyAtom>
-          </rdf:first>
-          <rdf:rest>
-            <swrl:AtomList>
-              <rdf:first>
-                <swrl:BuiltinAtom>
-                  <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
-                  <swrl:arguments>
-                    <rdf:List>
-                      <rdf:first rdf:resource="#t"/>
-                      <rdf:rest>
-                        <rdf:List>
-                          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subjective</rdf:first>
-                        </rdf:List>
-                      </rdf:rest>
-                    </rdf:List>
-                  </swrl:arguments>
-                </swrl:BuiltinAtom>
-              </rdf:first>
-              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </swrl:AtomList>
-          </rdf:rest>
-        </swrl:AtomList>
-      </rdf:rest>
-    </swrl:AtomList>
-  </swrl:body>
-  <swrl:head>
-    <swrl:AtomList>
-      <rdf:first>
-        <swrl:ClassAtom>
-          <swrl:classPredicate rdf:resource="#SubjectiveResponse"/>
-          <swrl:argument1 rdf:resource="#r"/>
-        </swrl:ClassAtom>
-      </rdf:first>
-      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    </swrl:AtomList>
-  </swrl:head>
-  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is_subjective_response</rdfs:label>
-  <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
-</swrl:Imp>
+<Desire rdf:about="#desire1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <is_desire_about rdf:resource="#onion"/>
+  <is_checked rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_checked>
+</Desire>
+
+<Query rdf:about="#query2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <query_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subjective</query_intent_type>
+  <query_p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">milk</query_p_name>
+</Query>
+
+<Desire rdf:about="#desire2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <is_desire_about rdf:resource="#milk"/>
+  <is_checked rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_checked>
+</Desire>
 
 <swrl:Imp>
   <swrl:body>
@@ -428,87 +491,6 @@
   </swrl:head>
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is_objective_response</rdfs:label>
-  <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
-</swrl:Imp>
-
-<swrl:Imp>
-  <swrl:body>
-    <swrl:AtomList>
-      <rdf:first>
-        <swrl:ClassAtom>
-          <swrl:classPredicate rdf:resource="#Query"/>
-          <swrl:argument1 rdf:resource="#q"/>
-        </swrl:ClassAtom>
-      </rdf:first>
-      <rdf:rest>
-        <swrl:AtomList>
-          <rdf:first>
-            <swrl:DatavaluedPropertyAtom>
-              <swrl:propertyPredicate rdf:resource="#query_p_name"/>
-              <swrl:argument1 rdf:resource="#q"/>
-              <swrl:argument2 rdf:resource="#n1"/>
-            </swrl:DatavaluedPropertyAtom>
-          </rdf:first>
-          <rdf:rest>
-            <swrl:AtomList>
-              <rdf:first>
-                <swrl:ClassAtom>
-                  <swrl:classPredicate rdf:resource="#Product"/>
-                  <swrl:argument1 rdf:resource="#p"/>
-                </swrl:ClassAtom>
-              </rdf:first>
-              <rdf:rest>
-                <swrl:AtomList>
-                  <rdf:first>
-                    <swrl:DatavaluedPropertyAtom>
-                      <swrl:propertyPredicate rdf:resource="#p_name"/>
-                      <swrl:argument1 rdf:resource="#p"/>
-                      <swrl:argument2 rdf:resource="#n2"/>
-                    </swrl:DatavaluedPropertyAtom>
-                  </rdf:first>
-                  <rdf:rest>
-                    <swrl:AtomList>
-                      <rdf:first>
-                        <swrl:BuiltinAtom>
-                          <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
-                          <swrl:arguments>
-                            <rdf:Description>
-                              <rdf:first rdf:resource="#n1"/>
-                              <rdf:rest>
-                                <rdf:Description>
-                                  <rdf:first rdf:resource="#n2"/>
-                                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                </rdf:Description>
-                              </rdf:rest>
-                            </rdf:Description>
-                          </swrl:arguments>
-                        </swrl:BuiltinAtom>
-                      </rdf:first>
-                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </swrl:AtomList>
-                  </rdf:rest>
-                </swrl:AtomList>
-              </rdf:rest>
-            </swrl:AtomList>
-          </rdf:rest>
-        </swrl:AtomList>
-      </rdf:rest>
-    </swrl:AtomList>
-  </swrl:body>
-  <swrl:head>
-    <swrl:AtomList>
-      <rdf:first>
-        <swrl:IndividualPropertyAtom>
-          <swrl:propertyPredicate rdf:resource="#is_about"/>
-          <swrl:argument1 rdf:resource="#q"/>
-          <swrl:argument2 rdf:resource="#p"/>
-        </swrl:IndividualPropertyAtom>
-      </rdf:first>
-      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    </swrl:AtomList>
-  </swrl:head>
-  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is_about</rdfs:label>
   <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
 </swrl:Imp>
 
@@ -765,6 +747,87 @@
     <swrl:AtomList>
       <rdf:first>
         <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#Query"/>
+          <swrl:argument1 rdf:resource="#q"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <swrl:AtomList>
+          <rdf:first>
+            <swrl:DatavaluedPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#query_p_name"/>
+              <swrl:argument1 rdf:resource="#q"/>
+              <swrl:argument2 rdf:resource="#n1"/>
+            </swrl:DatavaluedPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <swrl:AtomList>
+              <rdf:first>
+                <swrl:ClassAtom>
+                  <swrl:classPredicate rdf:resource="#Product"/>
+                  <swrl:argument1 rdf:resource="#p"/>
+                </swrl:ClassAtom>
+              </rdf:first>
+              <rdf:rest>
+                <swrl:AtomList>
+                  <rdf:first>
+                    <swrl:DatavaluedPropertyAtom>
+                      <swrl:propertyPredicate rdf:resource="#p_name"/>
+                      <swrl:argument1 rdf:resource="#p"/>
+                      <swrl:argument2 rdf:resource="#n2"/>
+                    </swrl:DatavaluedPropertyAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <swrl:AtomList>
+                      <rdf:first>
+                        <swrl:BuiltinAtom>
+                          <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
+                          <swrl:arguments>
+                            <rdf:Description>
+                              <rdf:first rdf:resource="#n1"/>
+                              <rdf:rest>
+                                <rdf:Description>
+                                  <rdf:first rdf:resource="#n2"/>
+                                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                </rdf:Description>
+                              </rdf:rest>
+                            </rdf:Description>
+                          </swrl:arguments>
+                        </swrl:BuiltinAtom>
+                      </rdf:first>
+                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </swrl:AtomList>
+                  </rdf:rest>
+                </swrl:AtomList>
+              </rdf:rest>
+            </swrl:AtomList>
+          </rdf:rest>
+        </swrl:AtomList>
+      </rdf:rest>
+    </swrl:AtomList>
+  </swrl:body>
+  <swrl:head>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#is_about"/>
+          <swrl:argument1 rdf:resource="#q"/>
+          <swrl:argument2 rdf:resource="#p"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </swrl:AtomList>
+  </swrl:head>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is_about</rdfs:label>
+  <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:ClassAtom>
           <swrl:classPredicate rdf:resource="#Shoppinglist"/>
           <swrl:argument1 rdf:resource="#s"/>
         </swrl:ClassAtom>
@@ -856,6 +919,183 @@
   </swrl:head>
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is_negative_response</rdfs:label>
+  <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#Response"/>
+          <swrl:argument1 rdf:resource="#r"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <swrl:AtomList>
+          <rdf:first>
+            <swrl:DatavaluedPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#response_type"/>
+              <swrl:argument1 rdf:resource="#r"/>
+              <swrl:argument2 rdf:resource="#t"/>
+            </swrl:DatavaluedPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <swrl:AtomList>
+              <rdf:first>
+                <swrl:BuiltinAtom>
+                  <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
+                  <swrl:arguments>
+                    <rdf:List>
+                      <rdf:first rdf:resource="#t"/>
+                      <rdf:rest>
+                        <rdf:List>
+                          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">control</rdf:first>
+                        </rdf:List>
+                      </rdf:rest>
+                    </rdf:List>
+                  </swrl:arguments>
+                </swrl:BuiltinAtom>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </swrl:AtomList>
+          </rdf:rest>
+        </swrl:AtomList>
+      </rdf:rest>
+    </swrl:AtomList>
+  </swrl:body>
+  <swrl:head>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#ControlResponse"/>
+          <swrl:argument1 rdf:resource="#r"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </swrl:AtomList>
+  </swrl:head>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is_control_response</rdfs:label>
+  <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#Response"/>
+          <swrl:argument1 rdf:resource="#r"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <swrl:AtomList>
+          <rdf:first>
+            <swrl:DatavaluedPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#response_type"/>
+              <swrl:argument1 rdf:resource="#r"/>
+              <swrl:argument2 rdf:resource="#t"/>
+            </swrl:DatavaluedPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <swrl:AtomList>
+              <rdf:first>
+                <swrl:BuiltinAtom>
+                  <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
+                  <swrl:arguments>
+                    <rdf:List>
+                      <rdf:first rdf:resource="#t"/>
+                      <rdf:rest>
+                        <rdf:List>
+                          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">affirmative</rdf:first>
+                        </rdf:List>
+                      </rdf:rest>
+                    </rdf:List>
+                  </swrl:arguments>
+                </swrl:BuiltinAtom>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </swrl:AtomList>
+          </rdf:rest>
+        </swrl:AtomList>
+      </rdf:rest>
+    </swrl:AtomList>
+  </swrl:body>
+  <swrl:head>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#AffirmativeResponse"/>
+          <swrl:argument1 rdf:resource="#r"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </swrl:AtomList>
+  </swrl:head>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is_affirmative_response</rdfs:label>
+  <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#Response"/>
+          <swrl:argument1 rdf:resource="#r"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <swrl:AtomList>
+          <rdf:first>
+            <swrl:DatavaluedPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#response_intent_type"/>
+              <swrl:argument1 rdf:resource="#r"/>
+              <swrl:argument2 rdf:resource="#t"/>
+            </swrl:DatavaluedPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <swrl:AtomList>
+              <rdf:first>
+                <swrl:BuiltinAtom>
+                  <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
+                  <swrl:arguments>
+                    <rdf:List>
+                      <rdf:first rdf:resource="#t"/>
+                      <rdf:rest>
+                        <rdf:List>
+                          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subjective</rdf:first>
+                        </rdf:List>
+                      </rdf:rest>
+                    </rdf:List>
+                  </swrl:arguments>
+                </swrl:BuiltinAtom>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </swrl:AtomList>
+          </rdf:rest>
+        </swrl:AtomList>
+      </rdf:rest>
+    </swrl:AtomList>
+  </swrl:body>
+  <swrl:head>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#SubjectiveResponse"/>
+          <swrl:argument1 rdf:resource="#r"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </swrl:AtomList>
+  </swrl:head>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is_subjective_response</rdfs:label>
   <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
 </swrl:Imp>
 

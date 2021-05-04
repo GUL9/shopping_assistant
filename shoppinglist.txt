@@ -1,3 +1,7 @@
 milk,5,unit
 apple,7,unit
-ice cream,1,unit 
+ice cream,1,unit
+garlic,3,unit
+parsley,1,unit
+butter,2,unit
+chocolate,5,unit

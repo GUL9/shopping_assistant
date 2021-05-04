@@ -24,19 +24,34 @@ print("Intent LOADED")
 
 
 print("Please query me :)")
+
+
+is_checking_desire = False
 for line in sys.stdin:
     if 'stop' == line.strip():
         break
-
     if line.strip():
-        intent = intent_handler.extract_intent(line)
-        product_info = qna_handler.extract_product_info(line)
-        print(f"intent: {intent}  Product info: {product_info}")
 
-        query = ontology.insert_query(intent, product_info)
-        response = ontology.get_answer(query)
+        if ontology.user_has_unchecked_desire():
+            is_checking_desire = True
+            control_response = ontology.get_control_response()
+            print(control_response)
+            speak(control_response)
 
-        print(response)
-        speak(response)
+        if is_checking_desire:
+            if line.strip() == 'no':
+                print("Good job")
+                speak("Good job")
+                ontology.check_current_user_desire()
+                is_checking_desire = False
+        else:
+            intent = intent_handler.extract_intent(line)
+            product_info = qna_handler.extract_product_info(line)
+            print(f"intent: {intent}  Product info: {product_info}")
+
+            query = ontology.generate_query(intent, product_info)
+            response = ontology.get_answer_to_query(query)
+            print(response)
+            speak(response)
 
 print("exiting")

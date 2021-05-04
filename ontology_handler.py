@@ -7,7 +7,7 @@ class OntologyHandler:
         self.path_for_saving_ontology = path_for_saving_ontology
         self.ontology = owlready2.get_ontology(path_to_ontology).load()
         # USER
-        self.user = self.ontology.User
+        self.user = self.ontology.User()
         # SHOPPINGLIST
         self.shoppinglist = self.ontology.Shoppinglist()
         lines = open(path_to_shoppinglist, 'r').readlines()
@@ -42,6 +42,13 @@ class OntologyHandler:
 
         self.ontology.save(file = self.path_for_saving_ontology, format="rdfxml")
 
+
+    def user_has_unchecked_desire(self):
+        return False if not self.user.has_current_desire or self.user.has_current_desire.is_checked else True
+
+    def check_current_user_desire(self):
+        self.user.has_current_desire.is_checked = True
+
     def product_with_name_exists(self, name):
         products = self.ontology.Product.instances()
         for product in products:
@@ -49,12 +56,19 @@ class OntologyHandler:
                 return True
         return False
 
-    def insert_query(self, intent_type, product_info):
+    def generate_query(self, intent_type, product_info):
         product_name = product_info['name']
         query = self.ontology.Query(query_p_name=product_name, query_intent_type=intent_type)
 
+        # Check if qeried product exist
         if not self.product_with_name_exists(product_name):
-            self.ontology.Product(name=product_name, p_name=product_name)
+            product = self.ontology.Product(name=product_name, p_name=product_name)
+        else:
+            product = next(prod for prod in self.ontology.Product.instances() if prod.p_name == product_name)
+
+        # Subjective is an expressed desire
+        if intent_type == "subjective" and not self.is_affirmative_answer(query):
+            self.user.has_current_desire = self.ontology.Desire(is_desire_about=product, is_checked=False)
 
         self.run_reasoner()
         return query
@@ -68,7 +82,14 @@ class OntologyHandler:
             return True
         return False
 
-    def get_answer(self, query):
+    def get_control_response(self):
+        suggestions = self.ontology.ControlResponse.instances()
+        selected_index = random.randint(0, len(suggestions)-1)
+        response = suggestions[selected_index]
+
+        return response.has_response_template.replace('?', self.user.has_current_desire.is_desire_about.p_name)
+
+    def get_answer_to_query(self, query):
         suggestions = query.can_be_answered_with
 
         if suggestions:
@@ -80,5 +101,6 @@ class OntologyHandler:
             selected_index = random.randint(0, len(suggestions)-1)
             response = suggestions[selected_index]
             if response and query.is_about:
-                return response.has_response_template.replace('??', num2words(query.is_about.quantity)).replace('?', query.is_about.p_name)
+                quantity_word = num2words(query.is_about.quantity) if query.is_about.quantity else 'it'
+                return response.has_response_template.replace('??', quantity_word).replace('?', query.is_about.p_name)
         return "I am sorry, I have no answer to you query :/"
