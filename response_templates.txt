@@ -4,4 +4,6 @@ subjective,negative,I am sorry but we do not need ?
 subjective,negative,I hear that you want ? but unfortunately it is not needed
 subjective,affirmative,Great idea buy ??
 subjective,affirmative,Your wish is my wish buy ??
-none,control,did you buy ?
+none,control,before we continue our shopping. may I ask. did you buy ?
+none,compliment,I know that you want ?. So good job to resist your impulse. Maybe next time we can buy it :)
+none,critique,I know that you want ?. But we do not need it. Maybe you should consider to return it :)

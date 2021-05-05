@@ -42,12 +42,13 @@ class OntologyHandler:
 
         self.ontology.save(file = self.path_for_saving_ontology, format="rdfxml")
 
-
-    def user_has_unchecked_desire(self):
-        return False if not self.user.has_current_desire or self.user.has_current_desire.is_checked else True
+    def is_current_user_desire_checked(self):
+        if self.user.has_current_desire:
+            return self.user.has_current_desire.is_checked
 
     def check_current_user_desire(self):
-        self.user.has_current_desire.is_checked = True
+        if self.user.has_current_desire:
+            self.user.has_current_desire.is_checked = True
 
     def product_with_name_exists(self, name):
         products = self.ontology.Product.instances()
@@ -58,7 +59,7 @@ class OntologyHandler:
 
     def generate_query(self, intent_type, product_info):
         product_name = product_info['name']
-        query = self.ontology.Query(query_p_name=product_name, query_intent_type=intent_type)
+        query = self.ontology.Query(query_p_name=product_name, query_intent_type=intent_type, is_answered=False)
 
         # Check if qeried product exist
         if not self.product_with_name_exists(product_name):
@@ -66,18 +67,19 @@ class OntologyHandler:
         else:
             product = next(prod for prod in self.ontology.Product.instances() if prod.p_name == product_name)
 
-        # Subjective is an expressed desire
-        if intent_type == "subjective" and not self.is_affirmative_answer(query):
-            self.user.has_current_desire = self.ontology.Desire(is_desire_about=product, is_checked=False)
-
         self.run_reasoner()
         return query
 
+    def update_desire(self, intent_type, query):
+        if intent_type == "subjective" and not self.is_affirmative_answer(query):
+            self.user.has_current_desire = self.ontology.Desire(is_desire_about=query.is_about, is_checked=False)
+            return self.user.has_current_desire
+
+        return None
 
     def is_affirmative_answer(self, query):
         known_products = self.ontology.KnownProduct.instances()
         query_product = query.is_about
-        print(f"ABOUT: {query_product} KNOWN PRODS: {known_products}")
         if query_product in known_products:
             return True
         return False
@@ -88,6 +90,21 @@ class OntologyHandler:
         response = suggestions[selected_index]
 
         return response.has_response_template.replace('?', self.user.has_current_desire.is_desire_about.p_name)
+
+    def get_critique_response(self):
+        suggestions = self.ontology.CritiqueResponse.instances()
+        selected_index = random.randint(0, len(suggestions)-1)
+        response = suggestions[selected_index]
+
+        return response.has_response_template.replace('?', self.user.has_current_desire.is_desire_about.p_name)
+
+    def get_compliment_response(self):
+        suggestions = self.ontology.ComplimentResponse.instances()
+        selected_index = random.randint(0, len(suggestions)-1)
+        response = suggestions[selected_index]
+
+        return response.has_response_template.replace('?', self.user.has_current_desire.is_desire_about.p_name)
+
 
     def get_answer_to_query(self, query):
         suggestions = query.can_be_answered_with
@@ -100,6 +117,7 @@ class OntologyHandler:
 
             selected_index = random.randint(0, len(suggestions)-1)
             response = suggestions[selected_index]
+
             if response and query.is_about:
                 quantity_word = num2words(query.is_about.quantity) if query.is_about.quantity else 'it'
                 return response.has_response_template.replace('??', quantity_word).replace('?', query.is_about.p_name)
