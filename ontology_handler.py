@@ -49,6 +49,7 @@ class OntologyHandler:
     def check_current_user_desire(self):
         if self.user.has_current_desire:
             self.user.has_current_desire.is_checked = True
+            self.run_reasoner()
 
     def product_with_name_exists(self, name):
         products = self.ontology.Product.instances()
@@ -70,9 +71,10 @@ class OntologyHandler:
         self.run_reasoner()
         return query
 
-    def update_desire(self, intent_type, query):
-        if intent_type == "subjective" and not self.is_affirmative_answer(query):
+    def update_desire(self, query):
+        if query.query_intent_type == "subjective" and not self.is_affirmative_answer(query):
             self.user.has_current_desire = self.ontology.Desire(is_desire_about=query.is_about, is_checked=False)
+            self.run_reasoner()
             return self.user.has_current_desire
 
         return None
@@ -80,6 +82,7 @@ class OntologyHandler:
     def is_affirmative_answer(self, query):
         known_products = self.ontology.KnownProduct.instances()
         query_product = query.is_about
+        print(f"ABOUT: {query_product}  KNOWN: {known_products}")
         if query_product in known_products:
             return True
         return False
@@ -105,8 +108,11 @@ class OntologyHandler:
 
         return response.has_response_template.replace('?', self.user.has_current_desire.is_desire_about.p_name)
 
+    def get_oldest_unanswered_query(self):
+        if self.user.has_unanswered_queries:
+            return self.user.has_unanswered_queries[-1]
 
-    def get_answer_to_query(self, query):
+    def answer_query(self, query):
         suggestions = query.can_be_answered_with
 
         if suggestions:
@@ -120,5 +126,8 @@ class OntologyHandler:
 
             if response and query.is_about:
                 quantity_word = num2words(query.is_about.quantity) if query.is_about.quantity else 'it'
-                return response.has_response_template.replace('??', quantity_word).replace('?', query.is_about.p_name)
-        return "I am sorry, I have no answer to you query :/"
+                answer = response.has_response_template.replace('??', quantity_word).replace('?', query.is_about.p_name)
+
+        query.is_answered = True
+        self.run_reasoner()
+        return answer

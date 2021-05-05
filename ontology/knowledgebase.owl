@@ -226,7 +226,7 @@
 
 <User rdf:about="#user1">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <has_current_desire rdf:resource="#desire1"/>
+  <has_current_desire rdf:resource="#desire6"/>
 </User>
 
 <Shoppinglist rdf:about="#shoppinglist1">
@@ -336,21 +336,7 @@
   <contains_products>
     <Product/>
   </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
+  <contains_products rdf:resource="#butter"/>
   <contains_products rdf:resource="#parsley"/>
   <contains_products>
     <Product/>
@@ -367,9 +353,15 @@
   <contains_products>
     <Product/>
   </contains_products>
-  <contains_products rdf:resource="#milk"/>
-  <contains_products rdf:resource="#icecream"/>
-  <contains_products rdf:resource="#butter"/>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
   <contains_products>
     <Product/>
   </contains_products>
@@ -390,19 +382,27 @@
   <contains_products>
     <Product/>
   </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
   <contains_products rdf:resource="#chocolate"/>
   <contains_products>
     <Product/>
   </contains_products>
+  <contains_products rdf:resource="#milk"/>
   <contains_products>
     <Product/>
   </contains_products>
   <contains_products>
     <Product/>
   </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products rdf:resource="#icecream"/>
   <contains_products>
     <Product/>
   </contains_products>
@@ -539,39 +539,32 @@
 
 <Query rdf:about="#query1">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <is_answered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_answered>
+  <is_answered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_answered>
   <query_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subjective</query_intent_type>
-  <query_p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">onion</query_p_name>
+  <query_p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cheese</query_p_name>
 </Query>
 
-<Product rdf:about="#onion">
+<Product rdf:about="#cheese">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">onion</p_name>
+  <p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cheese</p_name>
 </Product>
 
 <Desire rdf:about="#desire1">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <is_desire_about rdf:resource="#onion"/>
+  <is_desire_about rdf:resource="#cheese"/>
   <is_checked rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_checked>
 </Desire>
 
 <Query rdf:about="#query2">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <is_answered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_answered>
+  <is_answered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_answered>
   <query_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objective</query_intent_type>
   <query_p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">milk</query_p_name>
 </Query>
 
 <Query rdf:about="#query3">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <is_answered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_answered>
-  <query_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objective</query_intent_type>
-  <query_p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">milk</query_p_name>
-</Query>
-
-<Query rdf:about="#query4">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <is_answered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_answered>
+  <is_answered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_answered>
   <query_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objective</query_intent_type>
   <query_p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pork</query_p_name>
 </Query>
@@ -579,6 +572,151 @@
 <Product rdf:about="#pork">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pork</p_name>
+</Product>
+
+<Query rdf:about="#query4">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <is_answered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_answered>
+  <query_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subjective</query_intent_type>
+  <query_p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">beef</query_p_name>
+</Query>
+
+<Product rdf:about="#beef">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">beef</p_name>
+</Product>
+
+<Desire rdf:about="#desire2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <is_desire_about rdf:resource="#beef"/>
+  <is_checked rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_checked>
+</Desire>
+
+<Query rdf:about="#query5">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <is_answered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_answered>
+  <query_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subjective</query_intent_type>
+  <query_p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">steak</query_p_name>
+</Query>
+
+<Product rdf:about="#steak">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">steak</p_name>
+</Product>
+
+<Desire rdf:about="#desire3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <is_desire_about rdf:resource="#steak"/>
+  <is_checked rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_checked>
+</Desire>
+
+<Query rdf:about="#query6">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <is_answered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_answered>
+  <query_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objective</query_intent_type>
+  <query_p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cream</query_p_name>
+</Query>
+
+<Product rdf:about="#cream">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cream</p_name>
+</Product>
+
+<Query rdf:about="#query7">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <is_answered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_answered>
+  <query_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objective</query_intent_type>
+  <query_p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">potato</query_p_name>
+</Query>
+
+<Product rdf:about="#potato">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">potato</p_name>
+</Product>
+
+<Query rdf:about="#query8">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <is_answered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_answered>
+  <query_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subjective</query_intent_type>
+  <query_p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kimchi</query_p_name>
+</Query>
+
+<Product rdf:about="#kimchi">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kimchi</p_name>
+</Product>
+
+<Desire rdf:about="#desire4">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <is_desire_about rdf:resource="#kimchi"/>
+  <is_checked rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_checked>
+</Desire>
+
+<Query rdf:about="#query9">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <is_answered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_answered>
+  <query_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objective</query_intent_type>
+  <query_p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">milk</query_p_name>
+</Query>
+
+<Query rdf:about="#query10">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <is_answered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_answered>
+  <query_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subjective</query_intent_type>
+  <query_p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tomato</query_p_name>
+</Query>
+
+<Product rdf:about="#tomato">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tomato</p_name>
+</Product>
+
+<Desire rdf:about="#desire5">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <is_desire_about rdf:resource="#tomato"/>
+  <is_checked rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_checked>
+</Desire>
+
+<Query rdf:about="#query11">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <is_answered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_answered>
+  <query_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objective</query_intent_type>
+  <query_p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cucumber</query_p_name>
+</Query>
+
+<Product rdf:about="#cucumber">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cucumber</p_name>
+</Product>
+
+<Query rdf:about="#query12">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <is_answered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_answered>
+  <query_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subjective</query_intent_type>
+  <query_p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dick</query_p_name>
+</Query>
+
+<Product rdf:about="#dick">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dick</p_name>
+</Product>
+
+<Desire rdf:about="#desire6">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <is_desire_about rdf:resource="#dick"/>
+  <is_checked rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_checked>
+</Desire>
+
+<Query rdf:about="#query13">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <is_answered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_answered>
+  <query_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subjective</query_intent_type>
+  <query_p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pussy¨</query_p_name>
+</Query>
+
+<Product rdf:about="#pussy¨">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pussy¨</p_name>
 </Product>
 
 <swrl:Imp>
