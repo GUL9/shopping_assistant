@@ -139,6 +139,10 @@
   <rdfs:subClassOf rdf:resource="#Response"/>
 </owl:Class>
 
+<owl:Class rdf:about="#BacktrackResponse">
+  <rdfs:subClassOf rdf:resource="#Response"/>
+</owl:Class>
+
 <owl:Class rdf:about="#ComplimentResponse">
   <rdfs:subClassOf rdf:resource="#Response"/>
 </owl:Class>
@@ -226,7 +230,7 @@
 
 <User rdf:about="#user1">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <has_current_desire rdf:resource="#desire6"/>
+  <has_current_desire rdf:resource="#desire2"/>
 </User>
 
 <Shoppinglist rdf:about="#shoppinglist1">
@@ -246,150 +250,11 @@
   <contains_products>
     <Product/>
   </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products rdf:resource="#butter"/>
-  <contains_products rdf:resource="#parsley"/>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products rdf:resource="#apple"/>
-  <contains_products rdf:resource="#garlic"/>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products>
-    <Product/>
-  </contains_products>
-  <contains_products rdf:resource="#chocolate"/>
-  <contains_products>
-    <Product/>
-  </contains_products>
   <contains_products rdf:resource="#milk"/>
   <contains_products>
     <Product/>
   </contains_products>
+  <contains_products rdf:resource="#apple"/>
   <contains_products>
     <Product/>
   </contains_products>
@@ -403,6 +268,721 @@
     <Product/>
   </contains_products>
   <contains_products rdf:resource="#icecream"/>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products rdf:resource="#garlic"/>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products rdf:resource="#parsley"/>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products rdf:resource="#butter"/>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products rdf:resource="#chocolate"/>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
+  <contains_products>
+    <Product/>
+  </contains_products>
   <contains_products>
     <Product/>
   </contains_products>
@@ -537,6 +1117,20 @@
   <response_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">critique</response_type>
 </Response>
 
+<Response rdf:about="#response10">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <has_response_template rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I am sorry. I missed what you were saying. Could you please rephrase :)</has_response_template>
+  <response_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">none</response_intent_type>
+  <response_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unaware</response_type>
+</Response>
+
+<Response rdf:about="#response11">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <has_response_template rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Now. Regarding ?.</has_response_template>
+  <response_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">none</response_intent_type>
+  <response_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">backtrack</response_type>
+</Response>
+
 <Query rdf:about="#query1">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <is_answered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_answered>
@@ -566,118 +1160,10 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <is_answered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_answered>
   <query_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objective</query_intent_type>
-  <query_p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pork</query_p_name>
+  <query_p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">apple</query_p_name>
 </Query>
-
-<Product rdf:about="#pork">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pork</p_name>
-</Product>
 
 <Query rdf:about="#query4">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <is_answered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_answered>
-  <query_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subjective</query_intent_type>
-  <query_p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">beef</query_p_name>
-</Query>
-
-<Product rdf:about="#beef">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">beef</p_name>
-</Product>
-
-<Desire rdf:about="#desire2">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <is_desire_about rdf:resource="#beef"/>
-  <is_checked rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_checked>
-</Desire>
-
-<Query rdf:about="#query5">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <is_answered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_answered>
-  <query_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subjective</query_intent_type>
-  <query_p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">steak</query_p_name>
-</Query>
-
-<Product rdf:about="#steak">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">steak</p_name>
-</Product>
-
-<Desire rdf:about="#desire3">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <is_desire_about rdf:resource="#steak"/>
-  <is_checked rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_checked>
-</Desire>
-
-<Query rdf:about="#query6">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <is_answered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_answered>
-  <query_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objective</query_intent_type>
-  <query_p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cream</query_p_name>
-</Query>
-
-<Product rdf:about="#cream">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cream</p_name>
-</Product>
-
-<Query rdf:about="#query7">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <is_answered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_answered>
-  <query_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objective</query_intent_type>
-  <query_p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">potato</query_p_name>
-</Query>
-
-<Product rdf:about="#potato">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">potato</p_name>
-</Product>
-
-<Query rdf:about="#query8">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <is_answered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_answered>
-  <query_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subjective</query_intent_type>
-  <query_p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kimchi</query_p_name>
-</Query>
-
-<Product rdf:about="#kimchi">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kimchi</p_name>
-</Product>
-
-<Desire rdf:about="#desire4">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <is_desire_about rdf:resource="#kimchi"/>
-  <is_checked rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_checked>
-</Desire>
-
-<Query rdf:about="#query9">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <is_answered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_answered>
-  <query_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objective</query_intent_type>
-  <query_p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">milk</query_p_name>
-</Query>
-
-<Query rdf:about="#query10">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <is_answered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_answered>
-  <query_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subjective</query_intent_type>
-  <query_p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tomato</query_p_name>
-</Query>
-
-<Product rdf:about="#tomato">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tomato</p_name>
-</Product>
-
-<Desire rdf:about="#desire5">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <is_desire_about rdf:resource="#tomato"/>
-  <is_checked rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_checked>
-</Desire>
-
-<Query rdf:about="#query11">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <is_answered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_answered>
   <query_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objective</query_intent_type>
@@ -689,246 +1175,30 @@
   <p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cucumber</p_name>
 </Product>
 
-<Query rdf:about="#query12">
+<Query rdf:about="#query5">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <is_answered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_answered>
   <query_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subjective</query_intent_type>
-  <query_p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dick</query_p_name>
+  <query_p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cucumber</query_p_name>
 </Query>
 
-<Product rdf:about="#dick">
+<Desire rdf:about="#desire2">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dick</p_name>
-</Product>
-
-<Desire rdf:about="#desire6">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <is_desire_about rdf:resource="#dick"/>
-  <is_checked rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_checked>
+  <is_desire_about rdf:resource="#cucumber"/>
+  <is_checked rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_checked>
 </Desire>
 
-<Query rdf:about="#query13">
+<Query rdf:about="#query6">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <is_answered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_answered>
-  <query_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subjective</query_intent_type>
-  <query_p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pussy¨</query_p_name>
+  <query_intent_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objective</query_intent_type>
+  <query_p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">git</query_p_name>
 </Query>
 
-<Product rdf:about="#pussy¨">
+<Product rdf:about="#git">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pussy¨</p_name>
+  <p_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">git</p_name>
 </Product>
-
-<swrl:Imp>
-  <swrl:body>
-    <swrl:AtomList>
-      <rdf:first>
-        <swrl:ClassAtom>
-          <swrl:classPredicate rdf:resource="#Query"/>
-          <swrl:argument1 rdf:resource="#q"/>
-        </swrl:ClassAtom>
-      </rdf:first>
-      <rdf:rest>
-        <swrl:AtomList>
-          <rdf:first>
-            <swrl:DatavaluedPropertyAtom>
-              <swrl:propertyPredicate rdf:resource="#query_intent_type"/>
-              <swrl:argument1 rdf:resource="#q"/>
-              <swrl:argument2 rdf:resource="#i1"/>
-            </swrl:DatavaluedPropertyAtom>
-          </rdf:first>
-          <rdf:rest>
-            <swrl:AtomList>
-              <rdf:first>
-                <swrl:ClassAtom>
-                  <swrl:classPredicate rdf:resource="#Response"/>
-                  <swrl:argument1 rdf:resource="#r"/>
-                </swrl:ClassAtom>
-              </rdf:first>
-              <rdf:rest>
-                <swrl:AtomList>
-                  <rdf:first>
-                    <swrl:DatavaluedPropertyAtom>
-                      <swrl:propertyPredicate rdf:resource="#response_intent_type"/>
-                      <swrl:argument1 rdf:resource="#r"/>
-                      <swrl:argument2 rdf:resource="#i2"/>
-                    </swrl:DatavaluedPropertyAtom>
-                  </rdf:first>
-                  <rdf:rest>
-                    <swrl:AtomList>
-                      <rdf:first>
-                        <swrl:BuiltinAtom>
-                          <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
-                          <swrl:arguments>
-                            <rdf:Description>
-                              <rdf:first rdf:resource="#i1"/>
-                              <rdf:rest>
-                                <rdf:Description>
-                                  <rdf:first rdf:resource="#i2"/>
-                                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                </rdf:Description>
-                              </rdf:rest>
-                            </rdf:Description>
-                          </swrl:arguments>
-                        </swrl:BuiltinAtom>
-                      </rdf:first>
-                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </swrl:AtomList>
-                  </rdf:rest>
-                </swrl:AtomList>
-              </rdf:rest>
-            </swrl:AtomList>
-          </rdf:rest>
-        </swrl:AtomList>
-      </rdf:rest>
-    </swrl:AtomList>
-  </swrl:body>
-  <swrl:head>
-    <swrl:AtomList>
-      <rdf:first>
-        <swrl:IndividualPropertyAtom>
-          <swrl:propertyPredicate rdf:resource="#can_be_answered_with"/>
-          <swrl:argument1 rdf:resource="#q"/>
-          <swrl:argument2 rdf:resource="#r"/>
-        </swrl:IndividualPropertyAtom>
-      </rdf:first>
-      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    </swrl:AtomList>
-  </swrl:head>
-  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">can_be_answered_with</rdfs:label>
-  <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
-</swrl:Imp>
-
-<swrl:Imp>
-  <swrl:body>
-    <swrl:AtomList>
-      <rdf:first>
-        <swrl:ClassAtom>
-          <swrl:classPredicate rdf:resource="#Product"/>
-          <swrl:argument1 rdf:resource="#p"/>
-        </swrl:ClassAtom>
-      </rdf:first>
-      <rdf:rest>
-        <swrl:AtomList>
-          <rdf:first>
-            <swrl:ClassAtom>
-              <swrl:classPredicate rdf:resource="#Shoppinglist"/>
-              <swrl:argument1 rdf:resource="#l"/>
-            </swrl:ClassAtom>
-          </rdf:first>
-          <rdf:rest>
-            <swrl:AtomList>
-              <rdf:first>
-                <swrl:IndividualPropertyAtom>
-                  <swrl:propertyPredicate rdf:resource="#is_on_list"/>
-                  <swrl:argument1 rdf:resource="#p"/>
-                  <swrl:argument2 rdf:resource="#l"/>
-                </swrl:IndividualPropertyAtom>
-              </rdf:first>
-              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </swrl:AtomList>
-          </rdf:rest>
-        </swrl:AtomList>
-      </rdf:rest>
-    </swrl:AtomList>
-  </swrl:body>
-  <swrl:head>
-    <swrl:AtomList>
-      <rdf:first>
-        <swrl:ClassAtom>
-          <swrl:classPredicate rdf:resource="#KnownProduct"/>
-          <swrl:argument1 rdf:resource="#p"/>
-        </swrl:ClassAtom>
-      </rdf:first>
-      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    </swrl:AtomList>
-  </swrl:head>
-  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is_known_product</rdfs:label>
-  <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
-</swrl:Imp>
-
-<swrl:Imp>
-  <swrl:body>
-    <swrl:AtomList>
-      <rdf:first>
-        <swrl:ClassAtom>
-          <swrl:classPredicate rdf:resource="#Query"/>
-          <swrl:argument1 rdf:resource="#q"/>
-        </swrl:ClassAtom>
-      </rdf:first>
-      <rdf:rest>
-        <swrl:AtomList>
-          <rdf:first>
-            <swrl:DatavaluedPropertyAtom>
-              <swrl:propertyPredicate rdf:resource="#query_p_name"/>
-              <swrl:argument1 rdf:resource="#q"/>
-              <swrl:argument2 rdf:resource="#n1"/>
-            </swrl:DatavaluedPropertyAtom>
-          </rdf:first>
-          <rdf:rest>
-            <swrl:AtomList>
-              <rdf:first>
-                <swrl:ClassAtom>
-                  <swrl:classPredicate rdf:resource="#Product"/>
-                  <swrl:argument1 rdf:resource="#p"/>
-                </swrl:ClassAtom>
-              </rdf:first>
-              <rdf:rest>
-                <swrl:AtomList>
-                  <rdf:first>
-                    <swrl:DatavaluedPropertyAtom>
-                      <swrl:propertyPredicate rdf:resource="#p_name"/>
-                      <swrl:argument1 rdf:resource="#p"/>
-                      <swrl:argument2 rdf:resource="#n2"/>
-                    </swrl:DatavaluedPropertyAtom>
-                  </rdf:first>
-                  <rdf:rest>
-                    <swrl:AtomList>
-                      <rdf:first>
-                        <swrl:BuiltinAtom>
-                          <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
-                          <swrl:arguments>
-                            <rdf:Description>
-                              <rdf:first rdf:resource="#n1"/>
-                              <rdf:rest>
-                                <rdf:Description>
-                                  <rdf:first rdf:resource="#n2"/>
-                                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                </rdf:Description>
-                              </rdf:rest>
-                            </rdf:Description>
-                          </swrl:arguments>
-                        </swrl:BuiltinAtom>
-                      </rdf:first>
-                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </swrl:AtomList>
-                  </rdf:rest>
-                </swrl:AtomList>
-              </rdf:rest>
-            </swrl:AtomList>
-          </rdf:rest>
-        </swrl:AtomList>
-      </rdf:rest>
-    </swrl:AtomList>
-  </swrl:body>
-  <swrl:head>
-    <swrl:AtomList>
-      <rdf:first>
-        <swrl:IndividualPropertyAtom>
-          <swrl:propertyPredicate rdf:resource="#is_about"/>
-          <swrl:argument1 rdf:resource="#q"/>
-          <swrl:argument2 rdf:resource="#p"/>
-        </swrl:IndividualPropertyAtom>
-      </rdf:first>
-      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    </swrl:AtomList>
-  </swrl:head>
-  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is_about</rdfs:label>
-  <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
-</swrl:Imp>
 
 <swrl:Imp>
   <swrl:body>
@@ -1203,6 +1473,65 @@
   </swrl:head>
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is_critique_resonse</rdfs:label>
+  <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#Response"/>
+          <swrl:argument1 rdf:resource="#r"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <swrl:AtomList>
+          <rdf:first>
+            <swrl:DatavaluedPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#response_type"/>
+              <swrl:argument1 rdf:resource="#r"/>
+              <swrl:argument2 rdf:resource="#t"/>
+            </swrl:DatavaluedPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <swrl:AtomList>
+              <rdf:first>
+                <swrl:BuiltinAtom>
+                  <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
+                  <swrl:arguments>
+                    <rdf:List>
+                      <rdf:first rdf:resource="#t"/>
+                      <rdf:rest>
+                        <rdf:List>
+                          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">backtrack</rdf:first>
+                        </rdf:List>
+                      </rdf:rest>
+                    </rdf:List>
+                  </swrl:arguments>
+                </swrl:BuiltinAtom>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </swrl:AtomList>
+          </rdf:rest>
+        </swrl:AtomList>
+      </rdf:rest>
+    </swrl:AtomList>
+  </swrl:body>
+  <swrl:head>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#BacktrackResponse"/>
+          <swrl:argument1 rdf:resource="#r"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </swrl:AtomList>
+  </swrl:head>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is_backtrack_response</rdfs:label>
   <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
 </swrl:Imp>
 
@@ -1568,6 +1897,217 @@
   </swrl:head>
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_unanswered_queries</rdfs:label>
+  <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#Query"/>
+          <swrl:argument1 rdf:resource="#q"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <swrl:AtomList>
+          <rdf:first>
+            <swrl:DatavaluedPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#query_intent_type"/>
+              <swrl:argument1 rdf:resource="#q"/>
+              <swrl:argument2 rdf:resource="#i1"/>
+            </swrl:DatavaluedPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <swrl:AtomList>
+              <rdf:first>
+                <swrl:ClassAtom>
+                  <swrl:classPredicate rdf:resource="#Response"/>
+                  <swrl:argument1 rdf:resource="#r"/>
+                </swrl:ClassAtom>
+              </rdf:first>
+              <rdf:rest>
+                <swrl:AtomList>
+                  <rdf:first>
+                    <swrl:DatavaluedPropertyAtom>
+                      <swrl:propertyPredicate rdf:resource="#response_intent_type"/>
+                      <swrl:argument1 rdf:resource="#r"/>
+                      <swrl:argument2 rdf:resource="#i2"/>
+                    </swrl:DatavaluedPropertyAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <swrl:AtomList>
+                      <rdf:first>
+                        <swrl:BuiltinAtom>
+                          <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
+                          <swrl:arguments>
+                            <rdf:Description>
+                              <rdf:first rdf:resource="#i1"/>
+                              <rdf:rest>
+                                <rdf:Description>
+                                  <rdf:first rdf:resource="#i2"/>
+                                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                </rdf:Description>
+                              </rdf:rest>
+                            </rdf:Description>
+                          </swrl:arguments>
+                        </swrl:BuiltinAtom>
+                      </rdf:first>
+                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </swrl:AtomList>
+                  </rdf:rest>
+                </swrl:AtomList>
+              </rdf:rest>
+            </swrl:AtomList>
+          </rdf:rest>
+        </swrl:AtomList>
+      </rdf:rest>
+    </swrl:AtomList>
+  </swrl:body>
+  <swrl:head>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#can_be_answered_with"/>
+          <swrl:argument1 rdf:resource="#q"/>
+          <swrl:argument2 rdf:resource="#r"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </swrl:AtomList>
+  </swrl:head>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">can_be_answered_with</rdfs:label>
+  <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#Product"/>
+          <swrl:argument1 rdf:resource="#p"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <swrl:AtomList>
+          <rdf:first>
+            <swrl:ClassAtom>
+              <swrl:classPredicate rdf:resource="#Shoppinglist"/>
+              <swrl:argument1 rdf:resource="#l"/>
+            </swrl:ClassAtom>
+          </rdf:first>
+          <rdf:rest>
+            <swrl:AtomList>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#is_on_list"/>
+                  <swrl:argument1 rdf:resource="#p"/>
+                  <swrl:argument2 rdf:resource="#l"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </swrl:AtomList>
+          </rdf:rest>
+        </swrl:AtomList>
+      </rdf:rest>
+    </swrl:AtomList>
+  </swrl:body>
+  <swrl:head>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#KnownProduct"/>
+          <swrl:argument1 rdf:resource="#p"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </swrl:AtomList>
+  </swrl:head>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is_known_product</rdfs:label>
+  <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#Query"/>
+          <swrl:argument1 rdf:resource="#q"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <swrl:AtomList>
+          <rdf:first>
+            <swrl:DatavaluedPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#query_p_name"/>
+              <swrl:argument1 rdf:resource="#q"/>
+              <swrl:argument2 rdf:resource="#n1"/>
+            </swrl:DatavaluedPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <swrl:AtomList>
+              <rdf:first>
+                <swrl:ClassAtom>
+                  <swrl:classPredicate rdf:resource="#Product"/>
+                  <swrl:argument1 rdf:resource="#p"/>
+                </swrl:ClassAtom>
+              </rdf:first>
+              <rdf:rest>
+                <swrl:AtomList>
+                  <rdf:first>
+                    <swrl:DatavaluedPropertyAtom>
+                      <swrl:propertyPredicate rdf:resource="#p_name"/>
+                      <swrl:argument1 rdf:resource="#p"/>
+                      <swrl:argument2 rdf:resource="#n2"/>
+                    </swrl:DatavaluedPropertyAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <swrl:AtomList>
+                      <rdf:first>
+                        <swrl:BuiltinAtom>
+                          <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
+                          <swrl:arguments>
+                            <rdf:Description>
+                              <rdf:first rdf:resource="#n1"/>
+                              <rdf:rest>
+                                <rdf:Description>
+                                  <rdf:first rdf:resource="#n2"/>
+                                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                </rdf:Description>
+                              </rdf:rest>
+                            </rdf:Description>
+                          </swrl:arguments>
+                        </swrl:BuiltinAtom>
+                      </rdf:first>
+                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </swrl:AtomList>
+                  </rdf:rest>
+                </swrl:AtomList>
+              </rdf:rest>
+            </swrl:AtomList>
+          </rdf:rest>
+        </swrl:AtomList>
+      </rdf:rest>
+    </swrl:AtomList>
+  </swrl:body>
+  <swrl:head>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#is_about"/>
+          <swrl:argument1 rdf:resource="#q"/>
+          <swrl:argument2 rdf:resource="#p"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </swrl:AtomList>
+  </swrl:head>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is_about</rdfs:label>
   <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
 </swrl:Imp>
 

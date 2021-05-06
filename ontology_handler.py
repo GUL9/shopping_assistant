@@ -42,9 +42,10 @@ class OntologyHandler:
 
         self.ontology.save(file = self.path_for_saving_ontology, format="rdfxml")
 
-    def is_current_user_desire_checked(self):
+    def is_current_user_desire_unchecked(self):
         if self.user.has_current_desire:
-            return self.user.has_current_desire.is_checked
+            return False if self.user.has_current_desire.is_checked else True
+        return False
 
     def check_current_user_desire(self):
         if self.user.has_current_desire:
@@ -64,7 +65,7 @@ class OntologyHandler:
 
         # Check if qeried product exist
         if not self.product_with_name_exists(product_name):
-            product = self.ontology.Product(name=product_name, p_name=product_name)
+            product = self.ontology.Product(name=product_name.replace(' ', ''), p_name=product_name)
         else:
             product = next(prod for prod in self.ontology.Product.instances() if prod.p_name == product_name)
 
@@ -108,13 +109,31 @@ class OntologyHandler:
 
         return response.has_response_template.replace('?', self.user.has_current_desire.is_desire_about.p_name)
 
+    def get_unaware_response(self):
+        suggestions = self.ontology.UnawareResponse.instances()
+        selected_index = random.randint(0, len(suggestions)-1)
+        response = suggestions[selected_index]
+
+        return response.has_response_template
+
+    def get_backtrack_response(self):
+        suggestions = self.ontology.BacktrackResponse.instances()
+        selected_index = random.randint(0, len(suggestions)-1)
+        backtrack_response = suggestions[selected_index]
+
+        backtrack_query = self.get_oldest_unanswered_query()
+        query_answer = self.answer_query(backtrack_query)
+        query_product = backtrack_query.is_about.p_name
+
+        return backtrack_response.has_response_template.replace('?', query_product) + " " + query_answer.replace('?', query_product)
+
     def get_oldest_unanswered_query(self):
         if self.user.has_unanswered_queries:
             return self.user.has_unanswered_queries[-1]
 
     def answer_query(self, query):
         suggestions = query.can_be_answered_with
-
+        answer = ""
         if suggestions:
             if self.is_affirmative_answer(query):
                 suggestions = list(filter(lambda suggestion: suggestion.response_type == 'affirmative', suggestions))
@@ -128,6 +147,10 @@ class OntologyHandler:
                 quantity_word = num2words(query.is_about.quantity) if query.is_about.quantity else 'it'
                 answer = response.has_response_template.replace('??', quantity_word).replace('?', query.is_about.p_name)
 
+        if not answer:
+            answer = self.get_unaware_response()
+
         query.is_answered = True
         self.run_reasoner()
+
         return answer

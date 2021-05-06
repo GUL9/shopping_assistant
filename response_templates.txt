@@ -7,3 +7,5 @@ subjective,affirmative,Your wish is my wish buy ??
 none,control,before we continue our shopping. may I ask. did you buy ?
 none,compliment,I know that you want ?. So good job to resist your impulse. Maybe next time we can buy it :)
 none,critique,I know that you want ?. But we do not need it. Maybe you should consider to return it :)
+none,unaware,I am sorry. I missed what you were saying. Could you please rephrase :)
+none,backtrack,Now. Regarding ?. 

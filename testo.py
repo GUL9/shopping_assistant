@@ -37,9 +37,9 @@ for line in sys.stdin:
                 ontology.check_current_user_desire()
                 oldest_unanswered_query = ontology.get_oldest_unanswered_query()
                 if oldest_unanswered_query:
-                    response = response + "\n" + "Now. Regarding " + oldest_unanswered_query.is_about.p_name + ". " + ontology.answer_query(oldest_unanswered_query)
+                    response = response + "\n" + ontology.get_backtrack_response()
                     ontology.update_desire(oldest_unanswered_query)
-                    need_to_check_desire = False if ontology.is_current_user_desire_checked() else True
+                    need_to_check_desire = ontology.is_current_user_desire_unchecked()
             else:
                 intent = intent_handler.extract_intent(line)
                 product_info = qna_handler.extract_product_info(line)
@@ -52,8 +52,8 @@ for line in sys.stdin:
 
             query = ontology.generate_query(intent, product_info)
             response = ontology.answer_query(query)
-            desire = ontology.update_desire(query)
-            need_to_check_desire = False if ontology.is_current_user_desire_checked() else True
+            ontology.update_desire(query)
+            need_to_check_desire = ontology.is_current_user_desire_unchecked()
 
         print(response)
         speak(response)
